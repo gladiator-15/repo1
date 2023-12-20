@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "enter name: "
+read name
+if [ -f $name ]; then
+        echo "$name is a file"
+        echo "###############"
+        echo " "
+        echo "The content of file is below "
+        cat $name
+elif [ -d $name ]; then
+        echo " -$name is a directory"
+else
+        echo "File doesn't exist "
+fi
